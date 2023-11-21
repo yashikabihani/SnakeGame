@@ -38,7 +38,7 @@ def show_score(score):
 
 def make_snake(snake_block, list_snake):
     for x in list_snake:
-        pygame.draw.rect(title, black, [x[0], x[1]], snake_block)
+        pygame.draw.rect(title, black, (x[0], x[1], snake_block, snake_block))
 
 
 def display_msg(msg, color):
@@ -100,7 +100,7 @@ def game_start():
         value_y1 = value_y1 + new_y1
         title.fill(red)
 
-        pygame.draw.rect(title, green, [food_pos_x, food_pos_y, snake_block, snake_block])
+        pygame.draw.rect(title, green, (food_pos_x, food_pos_y, snake_block, snake_block))
         snake_head = []
         snake_head.append(value_x1)
         snake_head.append(value_y1)
